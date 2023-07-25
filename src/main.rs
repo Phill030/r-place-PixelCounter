@@ -63,5 +63,7 @@ fn count_pixels(colors: &HashMap<&str, Rgb<u8>>) {
         });
     });
 
+    assert_eq!(values.values().sum::<u64>(), img.pixels().len() as u64);
+
     println!("{:?} -> {}", values, values.values().sum::<u64>());
 }
